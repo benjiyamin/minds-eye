@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 class App extends React.Component {
 
   state = {
-    score: 0,
+    selected: [],
     topScore: 0,
     images: [
       '/images/180x180-sprites/tile000.png',
@@ -25,17 +25,30 @@ class App extends React.Component {
       '/images/180x180-sprites/tile023.png',
       '/images/180x180-sprites/tile024.png'
     ]
-  };
+  }
 
-  handleClick = () => {
+  reset = () => this.setState({ selected: [] })
+
+  imageHasBeenSelected = img => {
+    return this.state.selected.filter(i => { return i === img }).length ? true : false
+  }
+
+  handleClick = (evt) => {
     this.shuffleImages()
-    this.setState({ score: this.state.score + 1 });
-  };
+    if (this.imageHasBeenSelected(evt.target.src)) {
+      // Game over
+      this.setState({topScore: Math.max(this.state.topScore, this.state.selected.length)})
+      this.reset()
+    } else {
+      // Still playing
+      this.setState({ selected: [...this.state.selected, evt.target.src] })
+    }
+  }
 
   shuffleImages() {
     let array = this.state.images
     for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
+      var j = Math.floor(Math.random() * (i + 1))
       var temp = array[i];
       array[i] = array[j];
       array[j] = temp;
@@ -46,7 +59,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar score={this.state.score} topScore={this.state.topScore} />
+        <Navbar score={this.state.selected.length} topScore={this.state.topScore} />
         <Header />
         <Main>
           {this.state.images.map(img => {
