@@ -6,7 +6,7 @@ function Footer() {
     <footer className="page-footer">
       <div className="footer-copyright">
         <div className="container">
-          © 2019 Clicky Game
+          © 2019 Mind's Eye Click Game
         </div>
       </div>
     </footer>

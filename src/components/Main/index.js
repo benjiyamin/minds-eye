@@ -2,8 +2,9 @@ import React from "react";
 import "./style.css";
 
 function Main(props) {
+  let containerClass = props.incorrect ? 'container shake' : 'container'
   return (
-    <main className="container">
+    <main className={containerClass}>
       <div className="row">
         {props.children}
       </div>

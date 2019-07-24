@@ -33,16 +33,16 @@ class App extends React.Component {
     return this.state.selected.filter(i => { return i === img }).length ? true : false
   }
 
-  handleClick = (evt) => {
-    this.shuffleImages()
+  handleClick = evt => {
     if (this.imageHasBeenSelected(evt.target.src)) {
       // Game over
-      this.setState({topScore: Math.max(this.state.topScore, this.state.selected.length)})
       this.reset()
+      this.setState({topScore: Math.max(this.state.topScore, this.state.selected.length)})
     } else {
       // Still playing
       this.setState({ selected: [...this.state.selected, evt.target.src] })
     }
+    this.shuffleImages()
   }
 
   shuffleImages() {
@@ -57,13 +57,14 @@ class App extends React.Component {
   }
 
   render() {
+    let incorrect = this.state.topScore && !this.state.selected.length
     return (
       <div>
         <Navbar score={this.state.selected.length} topScore={this.state.topScore} />
         <Header />
-        <Main>
-          {this.state.images.map(img => {
-            return <Item imgSrc={img} handleClick={this.handleClick} />
+        <Main incorrect={incorrect}>
+          {this.state.images.map((img, i) => {
+            return <Item key={i} imgSrc={img} handleClick={this.handleClick} />
           })}
         </Main>
         <Footer />

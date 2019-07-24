@@ -1,0 +1,5 @@
+.pointer { cursor: pointer; }
+
+.zoom { transition: transform .2s; /* Animation */ }
+  
+.zoom:hover { transform: scale(1.05); }
