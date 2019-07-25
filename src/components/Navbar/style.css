@@ -1,7 +1,9 @@
+/*
 .correct {
     -webkit-animation: .4s correct;
     animation: .4s correct
 }
+*/
 
 .incorrect {
     -webkit-animation: .4s incorrect;
