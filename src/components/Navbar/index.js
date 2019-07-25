@@ -23,7 +23,7 @@ function Navbar(props) {
   return (
     <div className="navbar-fixed">
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper teal lighten-2">
           <span className="brand-logo left"> Mind's Eye </span>
           <span className={statusClasses()}> {statusMessage()} </span>
           <span className="brand-logo right"> Score: {props.score} | Top Score: {props.topScore} </span>
