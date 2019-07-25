@@ -2,7 +2,7 @@
   "name": "minds-eye",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://benjiyamin.github.io/minds-eye",
+  "homepage": "https://benjiyamin.github.io/minds-eye/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",

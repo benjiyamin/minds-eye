@@ -1,14 +1,23 @@
 import React from "react";
 import "./style.css";
 
+
 function Navbar(props) {
-  let statusMessage
-  if (props.score) {
-    statusMessage = <span className="brand-logo center correct"> You guessed correctly! </span>
-  } else if (props.topScore) {
-    statusMessage = <span className="brand-logo center incorrect"> You guessed incorrectly! </span>
-  } else {
-    statusMessage = <span className="brand-logo center"> Click an image to begin! </span>
+
+  function statusClasses () {
+    if (props.score) {
+      return "brand-logo center correct"
+    } else {
+      return props.topScore ? "brand-logo center incorrect" : "brand-logo center"
+    }
+  }
+
+  function statusMessage() {
+    if (props.score) {
+      return "You guessed correctly!"
+    } else {
+      return props.topScore ? "You guessed incorrectly!" : "Click an image to begin!"
+    }
   }
 
   return (
@@ -16,7 +25,7 @@ function Navbar(props) {
       <nav>
         <div className="nav-wrapper">
           <span className="brand-logo left"> Mind's Eye </span>
-          {statusMessage}
+          <span className={statusClasses()}> {statusMessage()} </span>
           <span className="brand-logo right"> Score: {props.score} | Top Score: {props.topScore} </span>
         </div>
       </nav>

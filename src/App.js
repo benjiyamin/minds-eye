@@ -27,7 +27,7 @@ class App extends React.Component {
     ]
   }
 
-  reset = () => this.setState({ selected: [] })
+  reset = () => this.setState({ selected: []})
 
   imageHasBeenSelected = img => {
     return this.state.selected.filter(i => { return i === img }).length ? true : false
