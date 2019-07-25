@@ -12,18 +12,18 @@ class App extends React.Component {
     selected: [],
     topScore: 0,
     images: [
-      '/images/180x180-sprites/tile000.png',
-      '/images/180x180-sprites/tile003.png',
-      '/images/180x180-sprites/tile008.png',
-      '/images/180x180-sprites/tile009.png',
-      '/images/180x180-sprites/tile010.png',
-      '/images/180x180-sprites/tile012.png',
-      '/images/180x180-sprites/tile013.png',
-      '/images/180x180-sprites/tile014.png',
-      '/images/180x180-sprites/tile016.png',
-      '/images/180x180-sprites/tile018.png',
-      '/images/180x180-sprites/tile023.png',
-      '/images/180x180-sprites/tile024.png'
+      'images/180x180-sprites/tile000.png',
+      'images/180x180-sprites/tile003.png',
+      'images/180x180-sprites/tile008.png',
+      'images/180x180-sprites/tile009.png',
+      'images/180x180-sprites/tile010.png',
+      'images/180x180-sprites/tile012.png',
+      'images/180x180-sprites/tile013.png',
+      'images/180x180-sprites/tile014.png',
+      'images/180x180-sprites/tile016.png',
+      'images/180x180-sprites/tile018.png',
+      'images/180x180-sprites/tile023.png',
+      'images/180x180-sprites/tile024.png'
     ]
   }
 
