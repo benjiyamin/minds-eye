@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/minds-eye/static/css/main.6b407ebb.chunk.css",
+    "main.js": "/minds-eye/static/js/main.ae2ccf20.chunk.js",
+    "main.js.map": "/minds-eye/static/js/main.ae2ccf20.chunk.js.map",
+    "runtime~main.js": "/minds-eye/static/js/runtime~main.a7d2cfdf.js",
+    "runtime~main.js.map": "/minds-eye/static/js/runtime~main.a7d2cfdf.js.map",
+    "static/js/2.97294558.chunk.js": "/minds-eye/static/js/2.97294558.chunk.js",
+    "static/js/2.97294558.chunk.js.map": "/minds-eye/static/js/2.97294558.chunk.js.map",
+    "index.html": "/minds-eye/index.html",
+    "precache-manifest.c790ecc5143651a4aeb543d3154ac0e1.js": "/minds-eye/precache-manifest.c790ecc5143651a4aeb543d3154ac0e1.js",
+    "service-worker.js": "/minds-eye/service-worker.js",
+    "static/css/main.6b407ebb.chunk.css.map": "/minds-eye/static/css/main.6b407ebb.chunk.css.map"
+  }
+}
